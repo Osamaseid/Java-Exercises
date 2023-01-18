@@ -1,0 +1,58 @@
+
+package metadata;
+
+import java.util.LinkedList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+interface Meta <I,K,L>{
+    void doSomething(I []t);
+}
+public class MetaData <T,K>{
+
+    T x;
+    int y;
+    K key;
+    MetaData (T t,K k){
+        this.key=k;
+        this.x=t;
+    }
+        <Y> void displayAnyArray(Y [] anyarr)
+        {
+            for(Y x:anyarr){
+                System.out.println(x);
+            }
+        }
+    
+    public static void main(String[] args) {
+         MetaData<String,Integer> md1=new MetaData<String,Integer>("metadata",101);
+         MetaData<Double,Integer> md2=new MetaData<Double,Integer>(18.87,101);
+         String[] days={"monday","",""};
+         md1.displayAnyArray(days);
+         Integer [] idnum={1,2,3};
+                md2.displayAnyArray(idnum);
+
+    
+ LinkedList<String> names=new LinkedList<String>();
+ names.add("ermias");
+ names.add("wakgari");
+        System.out.println(names);
+        Iterator it=names.iterator();
+        while(it.hasNext())
+        {
+           
+            System.out.println(it.next());
+        }
+        Map<String,Integer> countrycode=new HashMap<String,Integer>();
+        countrycode.put("ETH",241);
+        System.out.println(countrycode);
+       
+
+ while(it.hasNext())
+        {
+           
+            System.out.println(it.next());
+        }
+    }
+    
+}
